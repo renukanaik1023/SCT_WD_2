@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #111827
+    );
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.stopwatch-card {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    color: white;
+}
+
+.stopwatch-card h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+#display {
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+    min-width: 100px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.start {
+    background: #22c55e;
+}
+
+.pause {
+    background: #f59e0b;
+}
+
+.reset {
+    background: #ef4444;
+}
+
+.lap {
+    background: #3b82f6;
+}
+
+.lap-container {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.lap-container h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#laps {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#laps li {
+    background: rgba(255,255,255,0.1);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#laps::-webkit-scrollbar {
+    width: 5px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+
+    .stopwatch-card {
+        width: 100%;
+        padding: 25px;
+    }
+
+    #display {
+        font-size: 38px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
